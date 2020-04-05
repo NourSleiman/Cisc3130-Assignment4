@@ -7,7 +7,7 @@ public class MovieGenres {
     HashMap<String, Integer> map = new HashMap<>();
     HashMap<String, Integer> fiveMap = new HashMap<>();
     
-    String file = "movies.csv";
+    String file = "..data/movies.csv";
     read(file, map, fiveMap, years);
     
     //uses collections framework to sort the elements in ascending order
@@ -17,14 +17,14 @@ public class MovieGenres {
     HashMap<String, Integer> fiveMapSorted = descendingSort(fiveMap);
     
     //prints the general amount of movies per genre
-    PrintWriter pw = new PrintWriter("AllMovieGenres.txt");
+    PrintWriter pw = new PrintWriter("..data/output/AllMovieGenres.txt");
     for(String genre : sorted.keySet()) {
       pw.println(genre + " " + sorted.get(genre));
     } 
     pw.close();
     
     //prints the general amount fo movies per genre within the most recent 5 years
-    PrintWriter writer = new PrintWriter("Movies5Years.txt");
+    PrintWriter writer = new PrintWriter("..data/output/Movies5Years.txt");
     writer.println("Most recent five years: 2014-2018");
     for(String genre : fiveMapSorted.keySet()) {
       writer.println(genre + " " + fiveMapSorted.get(genre));
@@ -34,7 +34,7 @@ public class MovieGenres {
     Averages(sorted); 
     
     //prints the amount of movies per genre per year
-    PrintWriter p = new PrintWriter("GenrePerYear.txt");
+    PrintWriter p = new PrintWriter("..data/output/GenrePerYear.txt");
     for(String year : years){
       HashMap<String, Integer> perYear = readPerYear(file, year);
       p.println("For the year of " + year);
@@ -91,11 +91,10 @@ public class MovieGenres {
     br.close();
   }
   
-  public static HashMap<String, Integer> descendingSort(HashMap<String, Integer> map) 
- { 
+  //sorts the HashMap by in descending order, largest values first
+  public static HashMap<String, Integer> descendingSort(HashMap<String, Integer> map) { 
   // Create a list from elements of HashMap 
-  List<Map.Entry<String, Integer> > list = 
-   new LinkedList<Map.Entry<String, Integer> >(map.entrySet()); 
+  List<Map.Entry<String, Integer> > list = new LinkedList<Map.Entry<String, Integer> >(map.entrySet()); 
 
   // Sort the list 
   Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() { 
@@ -116,7 +115,7 @@ public class MovieGenres {
   
   //divides the total count of genre appearances by how many genres there are
   public static void Averages(HashMap<String, Integer> map) throws Exception{
-    PrintWriter w = new PrintWriter("MovieAverages.txt");
+    PrintWriter w = new PrintWriter("..data/output/MovieAverages.txt");
     int numGenres = 0;
     int total = 0;
     int average = 0;
