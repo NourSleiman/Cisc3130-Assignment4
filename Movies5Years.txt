@@ -1,0 +1,20 @@
+Most recent five years: 2014-2018
+Comedy 368
+Drama 341
+Action 227
+Thriller 193
+Adventure 152
+Sci-Fi 133
+Crime 102
+Horror 97
+Romance 81
+Fantasy 79
+Animation 77
+Documentary 61
+Children 54
+Mystery 51
+War 16
+IMAX 15
+(no genres listed) 14
+Western 10
+Musical 6

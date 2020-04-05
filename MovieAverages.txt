@@ -1,0 +1,21 @@
+Average number of movies per genre 1104
+Drama has more than average movies: 4361
+Comedy has more than average movies: 3756
+Thriller has more than average movies: 1894
+Action has more than average movies: 1828
+Romance has more than average movies: 1596
+Adventure has more than average movies: 1263
+Crime has more than average movies: 1199
+Sci-Fi has less than average movies: 980
+Horror has less than average movies: 978
+Fantasy has less than average movies: 779
+Children has less than average movies: 664
+Animation has less than average movies: 611
+Mystery has less than average movies: 573
+Documentary has less than average movies: 440
+War has less than average movies: 382
+Musical has less than average movies: 334
+Western has less than average movies: 167
+IMAX has less than average movies: 158
+Film-Noir has less than average movies: 87
+(no genres listed) has less than average movies: 34
